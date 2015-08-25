@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>submit</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="css/datepicker.css"> -->
+  </head>
+  <body>
+    <div class="header"><h1>涨姿势</h1></div>
+
+    <div class="register">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">用户注册</h3>
+        </div>
+
+        <div class="panel-body">
+<!-- username -->
+
+          <div id="username" class="inner-register clearfix">
+            <div class="title">
+              <p>用户名</p>
+            </div>
+            <div class="info">
+              <input type="text" name="username" class="form-control" placeholder="请输入用户名，字母数字组合" aria-describedby="basic-addon1" onblur="checkInput('http://www.1ke.co/backend/teach/js/checkuser_post.php', 'username')" onfocus="checkFocus('username')">
+            </div>
+            <div class="indicator clearfix">  
+            </div>
+          </div>
+<!-- email -->
+          <div id="email" class="inner-register clearfix">
+            <div class="title">
+              <p>邮箱</p>
+            </div>
+            <div class="info">
+              <input type="text" class="form-control" placeholder="推荐使用gmail, 就不用发验证邮件了" aria-describedby="basic-addon1" onblur="checkInput('http://www.1ke.co/backend/teach/js/checkuser_post.php', 'email')" onfocus="checkFocus('email')">
+            </div>
+
+            <div class="indicator clearfix">  
+            </div>
+          </div>
+
+   <!-- 性别 -->
+        <div id="password" class="inner-register clearfix">
+            <div class="title">
+              <p>密码</p>
+            </div>
+            <div class="info">
+
+              <input type="password" class="form-control" placeholder="字母数字组合" aria-describedby="basic-addon1" onblur="checkInput('http://www.1ke.co/backend/teach/js/checkuser_post.php', 'password')" onfocus="checkFocus('password')">
+            </div>
+            <div class="indicator clearfix">  
+            </div>
+        </div>
+   <!-- 颜值 -->
+
+<!-- 密码 -->
+        <div id="doublepassword" class="inner-register clearfix">
+            <div class="title">
+              <p>再次输入</p>
+            </div>
+            <div class="info">
+              <input type="password" class="form-control" placeholder="请输入相同密码" aria-describedby="basic-addon1" onblur="checkInput('http://www.1ke.co/backend/teach/js/checkuser_post.php', 'doublepassword')" onfocus="checkFocus('doublepassword')">
+            </div>
+
+            <div class="indicator clearfix">  
+            </div>
+        </div>
+
+        <div id="gender" class="inner-register clearfix">
+            <div class="title">
+              <p>性别</p>
+            </div>
+            <div class="info">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" onclick="checkGender(this)" value="MM" checked>
+                      MM
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" onclick="checkGender(this)" value="GG">
+                    GG
+                  </label>
+                </div>
+            </div>
+
+            <div class="indicator clearfix">  
+            </div>
+        </div>
+
+        <div id="age" class="inner-register clearfix">
+            <div class="title">
+              <p>年龄</p>
+            </div>
+            <div class="info">
+              <input type="number" name="age" class="form-control" placeholder="年龄" value="18" min="10" max="100" step="1" onclick="checkAge(this)" required="">
+            </div>
+
+            <div class="indicator clearfix">  
+            </div>
+        </div>
+
+        <div id="beauty" class="inner-register clearfix">
+            <div class="title"><p>颜值</p>
+            </div>
+            
+            <div class="info">
+              <!-- <div id="level" class="btn-group btn-group-justified" role="group" aria-label="..."> -->
+                <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="checkBeauty(this)">1</button>
+                <button type="button" class="btn btn-default" onclick="checkBeauty(this)">2</button>
+                <button type="button" class="btn btn-default" onclick="checkBeauty(this)">3</button>
+                <button type="button" class="btn btn-default" onclick="checkBeauty(this)">4</button>
+                <button type="button" class="btn btn-default" onclick="checkBeauty(this)">5</button>
+                <button type="button" class="btn btn-default" onclick="checkBeauty(this)">6</button>
+                <button type="button" class="btn btn-default" onclick="checkBeauty(this)">7</button>
+                <button type="button" class="btn btn-default" onclick="checkBeauty(this)">8</button>
+                <button type="button" class="btn btn-default" onclick="checkBeauty(this)">9</button>
+              <!-- </div> -->
+              </div>
+            <div class="indicator clearfix">  
+            </div>
+          </div>
+
+    <!-- 隐私政策  -->
+        <div id="policy" class="inner-register clearfix">
+            <div class="title">
+              <p>政策</p>
+            </div>
+            <div class="info">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" onclick="checkPolicy('policy')"> 同意版权声明，做遵纪守法好公民，防火防盗防学长.
+                </label>
+              </div>
+            </div>
+
+            <div class="indicator clearfix">  
+            </div>
+        </div>
+
+        <div id="register" class="inner-register clearfix">
+          <button id="submit" type="button" class="btn btn-default btn-lg" onclick="checkRegister('register')">注册
+          </button>         
+        </div>
+
+
+
+      </div>
+      
+
+      </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="js/ajax.js"></script>
+    <script type="text/javascript" src="js/jquary.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    </script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  </body>
+</html>

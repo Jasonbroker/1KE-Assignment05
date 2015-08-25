@@ -1,0 +1,50 @@
+.header {
+	margin-top: 100px;
+	text-align: center;
+}
+
+.register {
+
+	max-width: 550px;
+	max-width: 550￥90px;
+	margin: 100px auto;
+}
+
+.inner-register {
+
+	margin: 30px 50px 30px auto;
+	clear: both;
+}
+
+.title {
+	float: left;
+	line-height: 34px;
+}
+
+.title p{
+	margin: 0px;
+}
+
+.indicator {
+	margin: 10px 10px 0px 0px;
+	clear: both;
+	display: block;
+	width: 100%;
+	text-align: right;
+	/*background-color: #ff0000;*/
+}
+
+.info {
+	display: inline-block;
+	float:  right;
+	margin: auto 0px auto auto;
+	width: 70%;
+}
+
+#submit {
+	 background-color:  #337ab7;
+	 margin: 0px 200px;
+	 min-width: 150px;
+	 color: #fff;
+
+}
